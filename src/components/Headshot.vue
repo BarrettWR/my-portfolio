@@ -4,16 +4,16 @@
 </script>
 
 <template>
-    <div class="w-[200px] rounded-[100%] aspect-square overflow-hidden relative container cursor-pointer">
-        <img class="aspect-square object-cover scale-[75%] top-[35px] left-[1px] z-10 absolute pop" src="../assets/me_sticker.png" alt="">
-        <img class="aspect-square object-cover scale-[170%] absolute hover:brightness-95" src="../assets/me.jpg" alt="">
+    <div class="w-[230px] h-[230px] rounded-[100%] aspect-square overflow-hidden relative container cursor-pointer select-none">
+        <img class="select-none aspect-square object-cover scale-[75%] top-[42px] left-[2px] z-10 absolute pop" src="../assets/me_sticker.png" alt="">
+        <img class="select-none w-[230px] h-[230px] aspect-square object-cover scale-[170%] absolute hover:brightness-95" src="../assets/me.jpg" alt="">
     </div>
 </template>
 
 
 <style>
 .container:hover .pop {
-    top: 30px;
+    top: 35px;
     transform: scale(0.85);
     transition: all;
     transition-duration: 250ms;

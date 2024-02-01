@@ -1,8 +1,9 @@
 <script setup>
-import Headshot from '../components/Headshot.vue';
+import Sidebar from '../components/Sidebar.vue'
 
 </script>
 
 <template>
-    <Headshot/>
+    <Sidebar/>
+    
 </template>
