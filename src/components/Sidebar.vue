@@ -1,25 +1,26 @@
 <script setup>
+import { RouterLink } from 'vue-router';
 import Headshot from './Headshot.vue';
 </script>
 
 <template>
-    <div class="flex flex-col items-center gap-3 p-10 w-[20svw] h-screen border-r-2 border-gray-700 bg-slate-900 ">
+    <div class="flex flex-col items-center gap-3 p-10 w-[23svw] min-w-[280px] min-h-[650px] h-screen border-r-2 border-gray-700 bg-slate-900 ">
         <span id="blur">
             <div id="blob"></div>
         </span>
         <Headshot/>
-        <h1 class="text-3xl font-bold">Barrett Reinhard</h1>
+        <h1 class="text-3xl font-bold text-nowrap">Barrett Reinhard</h1>
 
-        <div class="flex flex-col items-center gap-5 mt-16 text-2xl">
-            <span class="spin ">About</span>
-            <span class="spin ">Work</span>
-            <span class="spin ">Contact</span>
+        <div class="flex flex-col items-center gap-5 mt-[20%] text-2xl">
+            <router-link to="/" class="spin ">About</router-link>
+            <router-link to="/work" class="spin ">Work</router-link>
+            <router-link to="/contact" class="spin ">Contact</router-link>
         </div>
 
         <div class="flex gap-7 mt-auto">
             <a class="" href="https://github.com/BarrettWR"><img class="icon spin " src="../assets/github.png" alt=""></a>
             <a class="" href="https://www.instagram.com/reinhardbarrett/"><img class="icon spin  invert" src="../assets/insta.png" alt=""></a>
-            <a class="" href="https://www.linkedin.com/in/barrett-reinhard-24a86314a/"><img class="icon spin  scale-[1.05]" src="../assets/linkedin.png" alt=""></a>
+            <a class="" href="https://www.linkedin.com/in/barrett-reinhard-24a86314a/"><img class="icon spin" src="../assets/linkedin.png" alt=""></a>
         </div>
 
         
@@ -61,7 +62,7 @@ img {
 }
 
 .icon {
-    width: 40px;
+    width: 35px;
     height: auto;
 }
 
@@ -69,6 +70,7 @@ img {
     z-index: 0;
     background-color: white;
     height: 16vmax;
+    min-height: 220px;
     aspect-ratio: 1;
     position: absolute;
     left: 50%;
