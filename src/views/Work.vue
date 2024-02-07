@@ -5,24 +5,34 @@ import Topbar from '../components/Topbar.vue'
 import VueGallery from 'vue-gallery'
 
 let images = ref([
-  'https://dummyimage.com/800/ffffff/000000',
-  'https://dummyimage.com/1600/ffffff/000000',
-  'https://dummyimage.com/1280/000000/ffffff',
-  'https://dummyimage.com/400/000000/ffffff',
-  'https://dummyimage.com/800/ffffff/000000',
-  'https://dummyimage.com/1600/ffffff/000000',
-  'https://dummyimage.com/1280/000000/ffffff',
-  'https://dummyimage.com/400/000000/ffffff',
-  'https://dummyimage.com/800/ffffff/000000',
-  'https://dummyimage.com/1600/ffffff/000000',
-  'https://dummyimage.com/1280/000000/ffffff',
-  'https://dummyimage.com/400/000000/ffffff',
-  'https://dummyimage.com/800/ffffff/000000',
-  'https://dummyimage.com/1600/ffffff/000000',
-  'https://dummyimage.com/1280/000000/ffffff',
+  {
+    title: '400x400',
+    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt ducimus reprehenderit eveniet fuga, eligendi atque error dicta iusto hic modi, molestias rem sint consequuntur soluta autem, itaque fugit maiores vel.',
+    href: 'https://dummyimage.com/400/ffffff/000000',
+  },
+  {
+    title: '400x400',
+    description: '400 x 400 Black',
+    href: 'https://dummyimage.com/400/000000/ffffff',
+  },
+  {
+    title: '400x400',
+    description: '400 x 400 White',
+    href: 'https://dummyimage.com/400/ffffff/000000',
+  },
+  {
+    title: '400x400',
+    description: '400 x 400 Black',
+    href: 'https://dummyimage.com/400/000000/ffffff',
+  },
+  
 ])
 
 let index = ref(null)
+
+function linkFunction() {
+  window.location.href = "https://www.example.com";
+}
 
 </script>
 
@@ -31,15 +41,15 @@ let index = ref(null)
         <Topbar>
             <template #title>Work</template>
         </Topbar>
-        <div class="max-w-[100%] h-[80svh] overflow-y-scroll p-20">
-            <div class="flex flex-wrap max-w-[100%]">
-                <VueGallery :images="images" :index="index" @close="index = null"></VueGallery>
+        <div class="max-w-[100%] h-[80svh] overflow-y-auto p-20">
+            <div class="flex flex-wrap place-content-center max-w-[100%]">
+                <VueGallery class="" description="hello" :images="images" :index="index" @close="index = null"></VueGallery>
                 <div
                     class="image"
                     v-for="(image, imageIndex) in images"
                     :key="imageIndex"
                     @click="index = imageIndex"
-                    :style="{ backgroundImage: 'url(' + image + ')', width: '350px', height: '200px' }"
+                    :style="{ backgroundImage: 'url(' + image.href + ')', width: '350px', height: '250px' }"
                 ></div>
             </div>
         </div>
@@ -47,7 +57,7 @@ let index = ref(null)
 
 </template>
 
-<style scoped>
+<style>
   .image {
     float: left;
     background-size: cover;
@@ -55,5 +65,21 @@ let index = ref(null)
     background-position: center center;
     border: 1px solid #ebebeb;
     margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 5px;
+  }
+
+  .image:hover {
+    scale: 1.05;
+  }
+
+  .blueimp-gallery > .title {
+    margin: 50px;
+  }
+
+  .blueimp-gallery-controls > .description {
+    margin: 50px;
+    margin-top: 70px;
   }
 </style>

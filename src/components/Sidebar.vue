@@ -12,15 +12,15 @@ import Headshot from './Headshot.vue';
         <h1 class="text-3xl font-bold text-nowrap">Barrett Reinhard</h1>
 
         <div class="flex flex-col items-center gap-5 mt-[20%] text-2xl">
-            <router-link to="/" class="spin ">About</router-link>
-            <router-link to="/work" class="spin ">Work</router-link>
-            <router-link to="/contact" class="spin ">Contact</router-link>
+            <router-link to="/" class="spin focus:font-bold">About</router-link>
+            <router-link to="/work" class="spin focus:font-bold">Work</router-link>
+            <router-link to="/contact" class="spin focus:font-bold">Contact</router-link>
         </div>
 
         <div class="flex gap-7 mt-auto">
-            <a class="" href="https://github.com/BarrettWR"><img class="icon spin " src="../assets/github.png" alt=""></a>
-            <a class="" href="https://www.instagram.com/reinhardbarrett/"><img class="icon spin  invert" src="../assets/insta.png" alt=""></a>
-            <a class="" href="https://www.linkedin.com/in/barrett-reinhard-24a86314a/"><img class="icon spin" src="../assets/linkedin.png" alt=""></a>
+            <a href="https://github.com/BarrettWR"><img class="icon spin " src="../assets/github.png" alt=""></a>
+            <a href="https://www.instagram.com/reinhardbarrett/"><img class="icon spin invert" src="../assets/insta.png" alt=""></a>
+            <a href="https://www.linkedin.com/in/barrett-reinhard-24a86314a/"><img class="icon spin" src="../assets/linkedin.png" alt=""></a>
         </div>
 
         
