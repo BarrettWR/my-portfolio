@@ -5,14 +5,12 @@ import Headshot from './Headshot.vue';
 
 <template>
     <div class="flex flex-col items-center gap-3 p-10 w-[23svw] min-w-[280px] min-h-[650px] h-screen border-r-2 border-gray-700 bg-slate-900 ">
-        <span id="blur">
-            <div id="blob"></div>
-        </span>
         <Headshot/>
+        
         <h1 class="text-3xl font-bold text-nowrap">Barrett Reinhard</h1>
 
         <div class="flex flex-col items-center gap-5 mt-[20%] text-2xl">
-            <router-link to="/" class="spin focus:font-bold">About</router-link>
+            <router-link to="/about" class="spin focus:font-bold">About</router-link>
             <router-link to="/work" class="spin focus:font-bold">Work</router-link>
             <router-link to="/contact" class="spin focus:font-bold">Contact</router-link>
         </div>
@@ -31,10 +29,9 @@ import Headshot from './Headshot.vue';
 
 <style>
 
-
 .spin:hover {
     cursor: pointer;
-    animation: spin-bounce 0.35s ease-in-out;
+    animation: spin-bounce 0.3s ease-in-out;
 }
 
 @keyframes spin-bounce {
@@ -64,43 +61,6 @@ img {
 .icon {
     width: 35px;
     height: auto;
-}
-
-#blob {
-    z-index: 0;
-    background-color: white;
-    height: 16vmax;
-    min-height: 220px;
-    aspect-ratio: 1;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
-    border-radius: 50%;
-    background: linear-gradient(to right, aquamarine, rgb(108, 57, 212));
-    animation: rotate 10s infinite;
-    opacity: 1;
-}
-
-#blur {
-    z-index: 0;
-    position: absolute;
-    top: 18%;
-    filter:blur(60px)
-}
-
-@keyframes rotate {
-  from {
-    rotate: 0deg;
-  }
-  
-  50% {
-    scale: 1 1.2;
-  }
-  
-  to {
-    rotate: 360deg;
-  }
 }
 
 
