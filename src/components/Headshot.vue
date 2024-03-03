@@ -7,10 +7,12 @@
     <span id="blur">
         <div id="blob"></div>
     </span>
-    <div class="w-[230px] h-[230px] rounded-[100%] aspect-square overflow-hidden relative container cursor-pointer select-none">
-        <img class="select-none aspect-square object-cover scale-[75%] top-[42px] left-[2px] z-10 absolute transition-all pop" src="../assets/me_sticker.png" alt="">
-        <img class="select-none w-[230px] h-[230px] aspect-square object-cover scale-[170%] absolute transition-all hover:brightness-95" src="../assets/me.jpg" alt="">
-    </div>
+    <router-link to="/" class="">
+      <div class="w-[230px] h-[230px] rounded-[100%] aspect-square overflow-hidden relative container cursor-pointer select-none">
+          <img class="select-none aspect-square object-cover scale-[75%] top-[42px] left-[2px] z-10 absolute transition-all pop" src="../assets/me_sticker.png" alt="">
+          <img class="select-none w-[230px] h-[230px] aspect-square object-cover scale-[170%] absolute transition-all hover:brightness-95" src="../assets/me.jpg" alt="">
+      </div>
+    </router-link>
 </template>
 
 
@@ -28,7 +30,7 @@
     translate: -50% -50%;
     border-radius: 50%;
     background: linear-gradient(to right, aquamarine, rgb(108, 57, 212));
-    animation: rotate 10s infinite;
+    animation: rotate 6s infinite;
     opacity: 1;
 }
 
@@ -40,15 +42,16 @@
 }
 
 @keyframes rotate {
-  from {
+  0% {
     rotate: 0deg;
   }
   
   50% {
-    scale: 1 1.2;
+    rotate: 180deg;
+    scale: 1.2 1.2;
   }
   
-  to {
+  100% {
     rotate: 360deg;
   }
 }

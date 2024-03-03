@@ -9,10 +9,10 @@ import Topbar from '../components/Topbar.vue'
             <template #title>About</template>
         </Topbar>
     
-        <div class="flex flex-col p-[100px] pt-[70px] max-w-[100%] h-[80svh] text-2xl gap-5 overflow-y-auto">
-            <h1 class="text-4xl">Hello! 👋</h1>
-            <p> <span class="fancytext font-bold">I'm Barrett Reinhard, a graphic and web designer.</span> I have a Bachelor's of Science in Communication Design (it's like graphic design, but with a greater focus on technology) and 
-                a minor in Computer Science. I have also completed The Odin Project, an online, open-source course on web development. 
+        <div class="flex flex-col p-[100px] pt-[70px] max-w-[100%] h-[82svh] text-2xl gap-5 overflow-y-auto">
+            <p>I'm a recent college grad, looking to land a job in web design. My favorite thing in the world is the point where <span class="text-[aquamarine]">design</span> meets <span class="text-purple-400">technology.</span> Ever since my first web design class in high school, I've known what I wanted to do.</p>
+            <p> I have a Bachelor's of Science in <span class="text-[aquamarine]">Communication Design</span> (it's like graphic design, but with a greater focus on tech) and 
+                a minor in Computer Science. I have also completed <span class="text-purple-400">The Odin Project,</span> an online, open-source course on web development. 
             </p>
             <p>
                 In my work experience as a graphic designer I created branding, social media posts, and physical marketing materials using

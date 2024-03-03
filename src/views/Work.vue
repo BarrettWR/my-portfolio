@@ -9,7 +9,8 @@ import Pagebreak from '@/assets/portfolio_images/pagebreak.png'
 import PPP from '@/assets/portfolio_images/PPP.png'
 import AS_work from '@/assets/portfolio_images/As_work.png'
 import AS_stickers from '@/assets/portfolio_images/As_stickers.png'
-
+import Minimessage from '@/assets/portfolio_images/minimessage.jpeg'
+import Inventory from '@/assets/portfolio_images/inventory.jpeg'
 
 
 let index = ref(null)
@@ -45,6 +46,16 @@ let images = ref([
     description: 'For larger events, I would be tasked with creating stickers to use as giveaway/promotional items. These are some of the stickers I made using Illustrator. I am especially proud of the ones depicting the school mascot, Monte.',
     href: AS_stickers,
   },
+  {
+    title: 'Mini Message Board',
+    description: 'As a part of The Odin Project, I created a message board using Express, Node, and MongoDB. Since it uses a database, you can send messages that will be stored permanently.',
+    href: Minimessage,
+  },
+  {
+    title: 'Inventory app',
+    description: 'I created an app that simulates a digital storefront using Express, Node, and MongoDB where you can add and remove items (dragons) from the inventory.',
+    href: Inventory,
+  },
 ])
 
 
@@ -56,20 +67,20 @@ let images = ref([
         <Topbar>
             <template #title>Work</template>
         </Topbar>
-        <div class="max-w-[100%] h-[80svh] p-[100px] overflow-y-auto">
+        <div class="max-w-[100%] h-[82svh] p-[100px] overflow-y-auto">
             <div class="flex flex-wrap place-content-center max-w-[100%] ">
-                <VueGallery class="" description="hello" :images="images" :index="index" :options="options" @close="index = null"></VueGallery>
+                <VueGallery class="" description="hello" :images="images" :index="index" @close="index = null"></VueGallery>
                 <div class="sizing flex grow flex-wrap place-content-center">
                     <div
                       class="image"
                       v-for="(image, imageIndex) in images"
                       :key="imageIndex"
                       @click="index = imageIndex"
-                      :style="{ backgroundImage: 'url(' + image.href + ')', }"
+                      :style="{ backgroundImage: 'url(' + image.href + ')' }"
                   ></div>
                 </div>
             </div>
-            <h1 class="text-center text-3xl m-10">Want more in-depth info? Check out my <a href="https://www.behance.net/" class="text-blue-400 hover:underline">Behance.</a></h1>
+            <h1 class="text-center text-3xl m-10">Want to see more? Check out my <a href="https://www.behance.net/barrettreinhard" class="text-blue-400 hover:underline">Behance</a> and my <a href="https://github.com/BarrettWR" class="text-blue-400 hover:underline">Github.</a></h1>
 
         </div>
     </div>
@@ -92,6 +103,7 @@ let images = ref([
 
   .image:hover {
     scale: 1.05;
+    /* background-image: url("") !important; */
   }
 
   .blueimp-gallery > .title {
